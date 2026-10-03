@@ -1,30 +1,19 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 int main(){
-    int q,l,r;
+    int q;
     cin>>q;
-    vector<int> arr;
-    for(int i=0; i<arr.size(); i++){
-        arr[i]=i+1;
-    }
-    vector<int>p;
-    long long sum=0;
-    for(int i=0; i<=r; i++){
-        sum+=arr[i];
-        p[i]=sum;
-    }
     while(q>0){
+        long long r,l;
         cin>>l>>r;
-        long long sumLtoR;
-
-        if(l==0){
-            sumLtoR=p[r];
+        long long sum;
+        if(l!=0){
+            sum = (r*(r+1))/2 - ((l-1)*l)/2;
         }
         else{
-            sumLtoR= p[r]-p[l-1];
+            sum =(r*(r+1))/2;
         }
-        cout<<sumLtoR<<endl;
+        cout<<sum<<endl;
         q--;
     }
 }
