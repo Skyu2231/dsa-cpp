@@ -16,7 +16,12 @@ int main(){
                 count+=1;
             }
         }
-
     }
-    cout<<count<<endl;
+    if(count==2){
+        cout<<"YES";
+    }
+    else{
+        cout<<"NO";
+    }
+    cout<<endl;
 }
